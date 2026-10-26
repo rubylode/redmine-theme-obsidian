@@ -1,10 +1,10 @@
-# Obsidian for Redmine
+# Rubylode Obsidian for Redmine
 
 Hairlines, small state circles and property chips, with a quiet sidebar. Dark is part of the design.
 
 A theme for Redmine 7 and up. It is CSS plus one small script (`javascripts/theme.js`), with no plugin and no change to Redmine itself. The script only reads the page: it puts a chip round dates, adds initials next to assignees and builds a switch between Issues, Gantt, Calendar and Activity. Without the script the theme still works, with plainer lists. Light and dark are equal here: dark follows your system setting and is part of the design (see [Dark mode](#dark-mode)).
 
-![A walk through Obsidian: the issue list, an issue, the wiki, the to-do page and the new-issue form](docs/demo/walkthrough-light.gif)
+![A walk through Rubylode Obsidian: the issue list, an issue, the wiki, the to-do page and the new-issue form](docs/demo/walkthrough-light.gif)
 
 | | |
 |---|---|
@@ -14,7 +14,7 @@ A theme for Redmine 7 and up. It is CSS plus one small script (`javascripts/them
 
 Dark mode:
 
-![A walk through Obsidian in dark mode](docs/demo/walkthrough-dark.gif)
+![A walk through Rubylode Obsidian in dark mode](docs/demo/walkthrough-dark.gif)
 
 | | |
 |---|---|

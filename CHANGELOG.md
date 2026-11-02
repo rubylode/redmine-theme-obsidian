@@ -4,6 +4,15 @@ All notable changes to this theme. The format follows [Keep a Changelog](https:/
 
 ## [2.0.1] - 2026-11-02
 
+### Changed
+
+- The base text size is 16px, up from 13px. It is the token `--theme-font-size`.
+- List text is 14px, up from 10.6px. The sidebar is 14px, up from 11.4px. Fields and buttons are 15px, up from 13.3px.
+- Labels, chips, headings, the header, the project tabs and the action buttons grew in the same proportion.
+- `--theme-font` starts with the bundled Noto Sans, in place of Inter, and `--theme-font-monospace` with the bundled Noto Sans Mono. The woff2 files and their SIL Open Font License 1.1 texts are in `obsidian/fonts/`.
+- In the sidebar layout, issue list cells have 8px of padding at each side and the subject wraps down to 9em, so the list fits at 1280px.
+- The project switcher in the top bar is 184px wide, up from 160px.
+
 ### Fixed
 
 - On pages with no project menu, such as My page and the welcome page, the sidebar now holds the global links (Home, My page, Projects, Administration for an administrator, Help). They leave the top bar there, so they show once.

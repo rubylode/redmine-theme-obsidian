@@ -118,3 +118,27 @@ nav.view-switch a.selected, nav.view-switch a.selected:hover {
   color: var(--theme-sidebar-selected-ink);
   font-weight: 600;
 }
+
+/* Black and white: the selected tab is underlined in the primary colour (black in light, white in dark), and links are ink
+ * with a thin underline, so they still read as links without a colour. */
+@media screen and (min-width: 900px) {
+  #main-menu li a.selected, #main-menu li a.selected:hover { border-block-end-color: var(--theme-primary); }
+}
+#content .tabs ul li a.selected, #content .tabs ul li a.selected:hover { border-block-end-color: var(--theme-primary); }
+
+#content a:where(:link, :visited):not(.button, .icon, .tab-left, .tab-right, .selected, .assignee-name),
+#sidebar a:where(:link, :visited):not(.button, .icon, .selected),
+.flash a:where(:link, :visited) {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--theme-line-strong);
+  text-underline-offset: 0.18em;
+}
+#content a:where(:link, :visited):not(.button, .icon, .selected):hover,
+#sidebar a:where(:link, :visited):not(.button, .icon, .selected):hover { text-decoration-color: currentColor; }
+#content :is(.tabs, .contextual, .pagination, .view-switch, .tag-label-color, .tag-label, .toggle-multiselect) a:where(:link, :visited),
+#content table.list th a, #content table.list tr.issue td.id a, #content .wiki-anchor, #content a.user.active img + * { text-decoration-line: none; }
+
+/* Redmine's blue avatar takes the primary colour, which is white in dark, so its initials are black there. */
+span.avatar-color-5.avatar-color-5 { color: var(--theme-ink-on-primary); }
+span.badge.badge-count.badge-count, .pagination ul.pages li.current :is(span, a):is(span, a) { color: var(--theme-ink-on-primary); }

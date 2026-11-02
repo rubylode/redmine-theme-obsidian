@@ -2,6 +2,29 @@
 
 All notable changes to this theme. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2.1.0] - 2026-11-02
+
+### Changed
+
+- The palette is black, white and grey. No blue or indigo is left in the chrome.
+- Links are in the ink colour with a thin grey underline, which turns to the ink colour on hover. Table headings, tabs, the action bars, pagination and issue ids are not underlined.
+- The selected sidebar item and the selected view switch are a light grey fill (`#ebebeb`) with black text. In dark they are white on `#2a2a2a`.
+- The Save, Apply and New issue buttons, and the "+" button, are black with white text. In dark they are `#f0f0f0` with black text.
+- The focus ring is black, with a grey halo. In dark it is `#f0f0f0`.
+- The selected tab underline is black, white in dark. Checkboxes and radio buttons are black.
+- The project mark and the sidebar tile are a black to dark grey square. In dark they are light grey, from the new `obsidian-mark-dark.svg`.
+- Hovered rows are `#f0f0f0` and the grey ramp has no tint. Dark surfaces are neutral near-black, with no blue in them.
+- Status New is grey and Feedback is dark grey (light grey in dark). Initials use plum, dark grey, green, brown, red and olive. Red, green and amber keep their meaning.
+- The code block, the selection and the search highlight are neutral or amber, with no violet.
+- Contrast was measured again in both modes: every text pair is 4.5:1 or more. See `docs/accessibility.md`.
+
+### Token meaning changes
+
+- `--theme-accent-0` to `--theme-accent-9` are a grey ramp, not an indigo-blue ramp. Redmine's blue ramp (`--oc-blue-*`) points into it.
+- `--theme-link` is the ink colour, not blue. `--theme-primary` and `--theme-primary-background` are near-black, and white in dark, with `--theme-ink-on-primary` set to black in dark.
+- `--theme-secondary` is a light grey and is no longer violet. `--theme-sidebar-tile` is a gradient from black to dark grey.
+- `--theme-mark-image` has a dark value that points to `obsidian-mark-dark.svg`.
+
 ## [2.0.1] - 2026-11-02
 
 ### Changed

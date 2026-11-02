@@ -1,6 +1,6 @@
 # Contrast
 
-Obsidian aims at WCAG 2.2 AA in light and dark: 4.5:1 for text (3:1 for large text), and 3:1 for the parts of a control that
+Obsidian is black, white and grey, with colour only for meaning (red, green, amber). It aims at WCAG 2.2 AA in light and dark: 4.5:1 for text (3:1 for large text), and 3:1 for the parts of a control that
 identify it (field borders) and for focus indicators.
 
 ## How it is measured
@@ -19,79 +19,79 @@ identify it (field borders) and for focus indicators.
 
 | Pair | Foreground | Background | Ratio |
 |---|---|---|---|
-| Body text on the page | `#14161c` | `#ffffff` | 18.08 |
-| Body text on a panel | `#14161c` | `#ffffff` | 18.08 |
-| Secondary text on the page | `#565c6d` | `#ffffff` | 6.67 |
-| Secondary text on a panel | `#565c6d` | `#ffffff` | 6.67 |
-| Secondary text on a sunken panel or stripe | `#565c6d` | `#fafafb` | 6.40 |
-| Secondary text on a hovered row | `#565c6d` | `#eef2ff` | 5.97 |
-| Selected sidebar item and view switch | `#254bb8` | `#eef2ff` | 6.76 |
+| Body text on the page | `#111111` | `#ffffff` | 18.88 |
+| Body text on a panel | `#111111` | `#ffffff` | 18.88 |
+| Secondary text on the page | `#595959` | `#ffffff` | 7.00 |
+| Secondary text on a panel | `#595959` | `#ffffff` | 7.00 |
+| Secondary text on a sunken panel or stripe | `#595959` | `#fafafa` | 6.71 |
+| Secondary text on a hovered row | `#595959` | `#f0f0f0` | 6.15 |
+| Selected sidebar item and view switch | `#000000` | `#ebebeb` | 17.62 |
 | Initials on the lightest of their colours (`#1f845a`) | `#ffffff` | `#1f845a` | 4.66 |
-| Link on a panel | `#2f5ee0` | `#ffffff` | 5.53 |
-| Link on a sunken panel or stripe | `#2f5ee0` | `#fafafb` | 5.30 |
-| Link on a hovered row | `#2f5ee0` | `#eef2ff` | 4.94 |
-| White on the primary | `#ffffff` | `#2f5ee0` | 5.53 |
-| White on the primary, hovered | `#ffffff` | `#254bb8` | 7.56 |
-| Button text | `#2c303d` | `#ffffff` | 13.15 |
+| Link on a panel | `#111111` | `#ffffff` | 18.88 |
+| Link on a sunken panel or stripe | `#111111` | `#fafafa` | 18.09 |
+| Link on a hovered row | `#111111` | `#f0f0f0` | 16.57 |
+| White on the primary | `#ffffff` | `#111111` | 18.88 |
+| White on the primary, hovered | `#ffffff` | `#333333` | 12.63 |
+| Button text | `#2b2b2b` | `#ffffff` | 14.16 |
 | Delete button text | `#a3232b` | `#fdecec` | 6.49 |
-| Header links | `#2c303d` | `#ffffff` | 13.15 |
-| Search field text | `#14161c` | `#fafafb` | 17.34 |
+| Header links | `#2b2b2b` | `#ffffff` | 14.16 |
+| Search field text | `#111111` | `#fafafa` | 18.09 |
 | Priority Immediate, white on red | `#ffffff` | `#b3123f` | 6.83 |
-| Chip New (lowest, on a hovered row) | `#404450` | `#dce0ee` | 7.38 |
-| Chip In Progress (lowest, on a hovered row) | `#825c07` | `#ebe6dd` | 4.85 |
-| Chip Resolved (lowest, on a hovered row) | `#1c5f40` | `#d3e6ea` | 5.90 |
-| Chip Feedback (lowest, on a hovered row) | `#533794` | `#e0ddfe` | 6.81 |
-| Chip Closed (lowest, on a hovered row) | `#1c5f40` | `#d3e6ea` | 5.90 |
-| Chip Rejected (lowest, on a hovered row) | `#802929` | `#ebdae5` | 6.92 |
-| Chip High (priority) (lowest, on a hovered row) | `#905316` | `#eee3e0` | 4.86 |
-| Chip Urgent (priority) (lowest, on a hovered row) | `#892b2e` | `#eddae6` | 6.44 |
-| Code block (kept light) | `#14161c` | `#f4f5f7` | 16.58 |
-| Field border on a panel (control) | `#868b9b` | `#ffffff` | 3.40 |
-| Field border on the page (control) | `#868b9b` | `#ffffff` | 3.40 |
-| Header field border (control) | `#868b9b` | `#ffffff` | 3.40 |
-| Focus ring on a panel | `#3f76ff` | `#ffffff` | 4.00 |
-| Focus ring on the page | `#3f76ff` | `#ffffff` | 4.00 |
+| Chip New (lowest, on a hovered row) | `#494949` | `#dfdfdf` | 6.76 |
+| Chip In Progress (lowest, on a hovered row) | `#825c07` | `#ede4d0` | 4.77 |
+| Chip Resolved (lowest, on a hovered row) | `#1c5f40` | `#d5e5dd` | 5.83 |
+| Chip Feedback (lowest, on a hovered row) | `#252525` | `#d7d7d7` | 10.65 |
+| Chip Closed (lowest, on a hovered row) | `#1c5f40` | `#d5e5dd` | 5.83 |
+| Chip Rejected (lowest, on a hovered row) | `#802929` | `#ecd8d8` | 6.78 |
+| Chip High (priority) (lowest, on a hovered row) | `#905316` | `#f0e2d3` | 4.81 |
+| Chip Urgent (priority) (lowest, on a hovered row) | `#892b2e` | `#eed8d9` | 6.31 |
+| Code block (kept light) | `#111111` | `#f5f5f5` | 17.32 |
+| Field border on a panel (control) | `#858585` | `#ffffff` | 3.69 |
+| Field border on the page (control) | `#858585` | `#ffffff` | 3.69 |
+| Header field border (control) | `#858585` | `#ffffff` | 3.69 |
+| Focus ring on a panel | `#111111` | `#ffffff` | 18.88 |
+| Focus ring on the page | `#111111` | `#ffffff` | 18.88 |
 
 ## Dark
 
 | Pair | Foreground | Background | Ratio |
 |---|---|---|---|
-| Body text on the page | `#eceef4` | `#0f1115` | 16.29 |
-| Body text on a panel | `#eceef4` | `#14161b` | 15.60 |
-| Secondary text on the page | `#a2a8b9` | `#0f1115` | 7.95 |
-| Secondary text on a panel | `#a2a8b9` | `#14161b` | 7.62 |
-| Secondary text on a sunken panel or stripe | `#a2a8b9` | `#191c22` | 7.18 |
-| Secondary text on a hovered row | `#a2a8b9` | `#172145` | 6.60 |
-| Selected sidebar item and view switch | `#c3d2ff` | `#1d2a5c` | 9.09 |
+| Body text on the page | `#f0f0f0` | `#0d0d0d` | 17.05 |
+| Body text on a panel | `#f0f0f0` | `#141414` | 16.17 |
+| Secondary text on the page | `#a6a6a6` | `#0d0d0d` | 7.98 |
+| Secondary text on a panel | `#a6a6a6` | `#141414` | 7.57 |
+| Secondary text on a sunken panel or stripe | `#a6a6a6` | `#1a1a1a` | 7.15 |
+| Secondary text on a hovered row | `#a6a6a6` | `#222222` | 6.54 |
+| Selected sidebar item and view switch | `#ffffff` | `#2a2a2a` | 14.35 |
 | Initials on the lightest of their colours (`#1f845a`) | `#ffffff` | `#1f845a` | 4.66 |
-| Link on a panel | `#7f9bff` | `#14161b` | 6.92 |
-| Link on a sunken panel or stripe | `#7f9bff` | `#191c22` | 6.53 |
-| Link on a hovered row | `#7f9bff` | `#172145` | 6.00 |
-| White on the primary | `#ffffff` | `#2f5ee0` | 5.53 |
-| White on the primary, hovered | `#ffffff` | `#254bb8` | 7.56 |
-| Button text | `#d6dae4` | `#191c22` | 12.20 |
+| Link on a panel | `#f0f0f0` | `#141414` | 16.17 |
+| Link on a sunken panel or stripe | `#f0f0f0` | `#1a1a1a` | 15.27 |
+| Link on a hovered row | `#f0f0f0` | `#222222` | 13.96 |
+| Black on the primary (white in dark) | `#111111` | `#f0f0f0` | 16.57 |
+| Black on the primary, hovered | `#111111` | `#ffffff` | 18.88 |
+| Button text | `#dcdcdc` | `#1a1a1a` | 12.69 |
 | Delete button text | `#f2a7ae` | `#35202a` | 7.84 |
-| Header links | `#bcc1cf` | `#0f1115` | 10.50 |
-| Search field text | `#eceef4` | `#14161b` | 15.60 |
+| Header links | `#c4c4c4` | `#0d0d0d` | 11.14 |
+| Search field text | `#f0f0f0` | `#141414` | 16.17 |
 | Priority Immediate, white on red | `#ffffff` | `#b3123f` | 6.83 |
-| Chip New (lowest, on a hovered row) | `#aeb1bc` | `#262f51` | 6.10 |
-| Chip In Progress (lowest, on a hovered row) | `#eac779` | `#3a373b` | 7.23 |
-| Chip Resolved (lowest, on a hovered row) | `#8dcaae` | `#1b384c` | 6.52 |
-| Chip Feedback (lowest, on a hovered row) | `#bfa5fa` | `#2c2c65` | 6.03 |
-| Chip Closed (lowest, on a hovered row) | `#8dcaae` | `#1b384c` | 6.52 |
-| Chip Rejected (lowest, on a hovered row) | `#e89999` | `#392745` | 6.09 |
-| Chip High (priority) (lowest, on a hovered row) | `#f7bf87` | `#3e343f` | 7.22 |
-| Chip Urgent (priority) (lowest, on a hovered row) | `#f19a9d` | `#3c2846` | 6.22 |
-| Code block (kept light) | `#14161c` | `#f4f5f7` | 16.58 |
-| Field border on a panel (control) | `#7a8094` | `#14161b` | 4.60 |
-| Field border on the page (control) | `#7a8094` | `#0f1115` | 4.81 |
-| Header field border (control) | `#7a8094` | `#0f1115` | 4.81 |
-| Focus ring on a panel | `#7f9bff` | `#14161b` | 6.92 |
-| Focus ring on the page | `#7f9bff` | `#0f1115` | 7.23 |
+| Chip New (lowest, on a hovered row) | `#b6b6b6` | `#323232` | 6.32 |
+| Chip In Progress (lowest, on a hovered row) | `#eac779` | `#43381e` | 7.10 |
+| Chip Resolved (lowest, on a hovered row) | `#8dcaae` | `#24382f` | 6.66 |
+| Chip Feedback (lowest, on a hovered row) | `#d4d4d4` | `#3c3c3c` | 7.44 |
+| Chip Closed (lowest, on a hovered row) | `#8dcaae` | `#24382f` | 6.66 |
+| Chip Rejected (lowest, on a hovered row) | `#e89999` | `#422828` | 6.03 |
+| Chip High (priority) (lowest, on a hovered row) | `#f7bf87` | `#473522` | 7.09 |
+| Chip Urgent (priority) (lowest, on a hovered row) | `#f19a9d` | `#45292a` | 6.14 |
+| Code block (kept light) | `#111111` | `#f5f5f5` | 17.32 |
+| Field border on a panel (control) | `#808080` | `#141414` | 4.66 |
+| Field border on the page (control) | `#808080` | `#0d0d0d` | 4.92 |
+| Header field border (control) | `#808080` | `#0d0d0d` | 4.92 |
+| Focus ring on a panel | `#f0f0f0` | `#141414` | 16.17 |
+| Focus ring on the page | `#f0f0f0` | `#0d0d0d` | 17.05 |
 
 ## Not covered
 
-- The chip round a date in a list has a decorative border (1.45:1 in light, 2.25:1 in dark). The date itself is text in the row's colour and is measured.
+- The chip round a date in a list has a decorative border (1.48:1 in light, 2.18:1 in dark). The date itself is text in the row's colour and is measured.
 - The initials beside an assignee repeat the name, which stays in the page for screen readers, so the initials are hidden from them.
 
 - Redmine's own avatar colours with white initials: the three that fall below 4.5:1 (red, orange, pink) are darkened; the rest

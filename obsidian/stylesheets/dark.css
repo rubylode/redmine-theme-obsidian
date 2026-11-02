@@ -10,61 +10,69 @@
     color-scheme: dark;
   }
 
-  /* Obsidian's tokens, dark values: near-black with a cool tint, panels a step lighter than the page, light ink, and the indigo
-   * lifted so it reads on dark. A name not set here keeps its light value from tokens.css. */
+  /* Obsidian's tokens, dark values: neutral near-black, panels a step lighter than the page, light ink, and the primary
+   * turned white so it reads on dark. A name not set here keeps its light value from tokens.css. */
   :root {
-    --theme-page: #0f1115;
-    --theme-surface: #14161b;
-    --theme-surface-sunken: #191c22;
-    --theme-surface-hover: #172145;
-    --theme-line: #262a33;
-    --theme-line-soft: #20232b;
-    --theme-line-strong: #7a8094;
+    --theme-page: #0d0d0d;
+    --theme-surface: #141414;
+    --theme-surface-sunken: #1a1a1a;
+    --theme-surface-hover: #222222;
+    --theme-line: #2a2a2a;
+    --theme-line-soft: #222222;
+    --theme-line-strong: #808080;
 
-    --theme-ink: #eceef4;
-    --theme-ink-soft: #d6dae4;
-    --theme-ink-muted: #a2a8b9;
+    --theme-ink: #f0f0f0;
+    --theme-ink-soft: #dcdcdc;
+    --theme-ink-muted: #a6a6a6;
 
-    --theme-accent-0: #172145;
-    --theme-accent-1: #1d2a5c;
-    --theme-accent-2: #2a3b80;
-    --theme-accent-3: #4560c8;
-    --theme-accent-4: #6b8cff;
-    --theme-accent-8: #a9bdff;
-    --theme-accent-9: #c3d2ff;
-    --theme-accent-1-rgb: 29, 42, 92;
+    --theme-accent-0: #1f1f1f;
+    --theme-accent-1: #2a2a2a;
+    --theme-accent-2: #3a3a3a;
+    --theme-accent-3: #5c5c5c;
+    --theme-accent-4: #8a8a8a;
+    --theme-accent-8: #e0e0e0;
+    --theme-accent-9: #f5f5f5;
+    --theme-accent-1-rgb: 42, 42, 42;
 
-    --theme-secondary-pale: #1f1a36;
+    --theme-secondary-pale: #262626;
     --theme-tertiary-pale: #33231a;
-    --theme-accent-pale: #172145;
+    --theme-accent-pale: #1f1f1f;
 
-    --theme-link: #7f9bff;
-    --theme-link-hover: #a9bdff;
-    --theme-redmine-accent: #7f9bff;
-    --theme-redmine-accent-rgb: 127, 155, 255;
+    --theme-link: #f0f0f0;
+    --theme-link-hover: #ffffff;
+    --theme-redmine-accent: #e8e8e8;
+    --theme-redmine-accent-rgb: 232, 232, 232;
 
-    --theme-header-background: #0f1115;
-    --theme-header-background-solid: #0f1115;
-    --theme-header-link: #bcc1cf;
+    --theme-header-background: #0d0d0d;
+    --theme-header-background-solid: #0d0d0d;
+    --theme-header-link: #c4c4c4;
     --theme-header-hover-background: rgba(236, 238, 244, 0.08);
-    --theme-header-line: #262a33;
-    --theme-header-field-background: #14161b;
-    --theme-header-field-border: #7a8094;
+    --theme-header-line: #2a2a2a;
+    --theme-header-field-background: #141414;
+    --theme-header-field-border: #808080;
 
-    --theme-button-background: #191c22;
-    --theme-button-border: #7a8094;
-    --theme-button-ink: #d6dae4;
+    --theme-button-background: #1a1a1a;
+    --theme-button-border: #808080;
+    --theme-button-ink: #dcdcdc;
     --theme-danger-soft: #35202a;
     --theme-danger-soft-border: #6b3440;
     --theme-danger-ink: #f2a7ae;
 
-    /* The sidebar is a step lighter than the page; the selected item is a pale indigo on deep indigo. */
+    /* The sidebar is a step lighter than the page; the selected item is white on a mid grey. */
     --theme-sidebar-background: var(--theme-surface);
-    --theme-sidebar-selected-background: var(--theme-accent-1);
-    --theme-sidebar-selected-ink: var(--theme-accent-9);
+    --theme-sidebar-selected-background: #2a2a2a;
+    --theme-sidebar-selected-ink: #ffffff;
 
-    --theme-focus: #7f9bff;
-    --theme-focus-halo: rgba(127, 155, 255, 0.3);
+    --theme-primary: #f0f0f0;
+    --theme-primary-hover: #ffffff;
+    --theme-ink-on-primary: #111111;
+    --theme-primary-background: #f0f0f0;
+    --theme-primary-background-hover: #ffffff;
+    --theme-sidebar-tile: linear-gradient(135deg, #f0f0f0, #8a8a8a);
+    --theme-mark-image: url("../images/obsidian-mark-dark.svg");
+    --theme-status-feedback: #b0b0b0;
+    --theme-focus: #f0f0f0;
+    --theme-focus-halo: rgba(240, 240, 240, 0.28);
 
     --theme-chip-ink-mix: #ffffff;
     --theme-chip-ink-share: 55%;
@@ -75,8 +83,8 @@
     --theme-shadow-header-scrolled: 0 1px 0 rgba(255, 255, 255, 0.06);
 
     /* Code blocks stay light: Redmine's syntax colours are made for a light background. */
-    --theme-code-background: #f4f5f7;
-    --theme-code-ink: #14161c;
+    --theme-code-background: #f5f5f5;
+    --theme-code-ink: #111111;
 
     --theme-success-ink: #8fd3a6;
     --theme-success-soft: #18302a;
@@ -89,7 +97,7 @@
     --theme-flash-warning-background: #33291a;
     --theme-flash-warning-border: #6b5226;
     --theme-flash-warning-ink: #f0c67a;
-    --theme-activity-edit-ink: #c9bdf5;
+    --theme-activity-edit-ink: #d0d0d0;
     --theme-activity-wiki-ink: #f2b89c;
     --theme-search-highlight-ink: #f7d9c9;
     --theme-diff-removed: #3b2026;
@@ -97,23 +105,23 @@
     --theme-gantt-late-label: #f0b27a;
 
     /* The icons drawn in the stylesheet are light grey. */
-    --theme-select-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a2a8b9' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    --theme-search-field-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a2a8b9' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
-    --theme-project-jump-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a2a8b9' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    --theme-select-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a6a6a6' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    --theme-search-field-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a6a6a6' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+    --theme-project-jump-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a6a6a6' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
 
     /* Redmine's own palette, dark. --oc-white is the panel colour, so the base sets white text on colour by hand. */
     --theme-redmine-white: var(--theme-surface);
-    --theme-neutral-0: #191c22;
-    --theme-neutral-1: #1d2027;
-    --theme-neutral-2: #20232b;
-    --theme-neutral-3: #292d37;
-    --theme-neutral-4: #4a5060;
-    --theme-neutral-5: #a2a8b9;
-    --theme-neutral-6: #a2a8b9;
-    --theme-neutral-7: #bcc1cf;
-    --theme-neutral-8: #d6dae4;
-    --theme-neutral-9: #eceef4;
-    --theme-neutral-9-rgb: 236, 238, 244;
+    --theme-neutral-0: #1a1a1a;
+    --theme-neutral-1: #1e1e1e;
+    --theme-neutral-2: #222222;
+    --theme-neutral-3: #2c2c2c;
+    --theme-neutral-4: #4d4d4d;
+    --theme-neutral-5: #a6a6a6;
+    --theme-neutral-6: #a6a6a6;
+    --theme-neutral-7: #c4c4c4;
+    --theme-neutral-8: #dcdcdc;
+    --theme-neutral-9: #f0f0f0;
+    --theme-neutral-9-rgb: 240, 240, 240;
   }
 
   /* White text on colour: Redmine writes it with --oc-white, which is a dark surface in the dark scheme. */

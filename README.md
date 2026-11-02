@@ -1,6 +1,6 @@
 # Rubylode Obsidian for Redmine
 
-A theme for Redmine 7 and up: a white page with hairlines, one indigo-blue, small corners and state circles and priority squares in the issue list.
+A theme for Redmine 7 and up: a white page with hairlines, black and grey for everything else, small corners and state circles and priority squares in the issue list.
 
 It is plain CSS plus one small script (`javascripts/theme.js`, about 170 lines), with no plugin, no build step and no change to
 Redmine itself. The script only reads the page. It puts a status dot beside the group name in an issue list grouped by status,
@@ -52,15 +52,16 @@ The screenshots come from the demo Redmine in this repository; the people, proje
 
 ## What it looks like
 
-- A white page, and white panels told apart by hairlines instead of shadows. Greys have almost no tint, and the only colour
-  that stays is one indigo-blue for links, selected items, focus and the main action.
-- A full-height sidebar, 216px wide, on the left. It holds the project name behind a small indigo-to-violet tile and the project
-  menu, with the selected item in a pale indigo. On the administration pages it holds the administration menu. A thin bar
+- A white page, and white panels told apart by hairlines instead of shadows. The palette is black, white and grey. Links are
+  dark with an underline, the main action is a black button, and focus is a black ring. Colour is kept only for meaning: red for
+  overdue and errors, green for closed, amber for warnings.
+- A full-height sidebar, 216px wide, on the left. It holds the project name behind a small black square and the project
+  menu, with the selected item in a light grey. On the administration pages it holds the administration menu. A thin bar
   across the top holds the global links, the New issue button, the search and project switcher, and your avatar.
 - The issue list marks status with a circle (empty for New, half for In Progress and Feedback, full for Resolved, Closed and
   Rejected) and priority with a small square, as plain cells. New is grey and Closed is green. Rows have hairlines and faint
-  stripes, and hover is a pale indigo.
-- Dates in lists sit in a small chip, and the assignee is shown as round initials in one of six colours, with the name in the
+  stripes, and hover is a pale grey.
+- Dates in lists sit in a small chip, and the assignee is shown as round initials in one of six muted colours, with the name in the
   tooltip. Above the issue list, the Gantt chart, the calendar and the activity page, a switch moves between Issues, Gantt,
   Calendar and Activity.
 - On the issue page, status and priority are chips, and the card has an edge in the status colour.
@@ -117,7 +118,7 @@ start with `--theme-` and are the same in every Rubylode theme. The main ones:
 | `--theme-page`, `--theme-surface`, `--theme-surface-sunken`, `--theme-surface-hover` | the page, the panels, sunken panels and stripes, hovered rows |
 | `--theme-line`, `--theme-line-soft`, `--theme-line-strong` | panel borders and row lines, column lines, field borders |
 | `--theme-ink`, `--theme-ink-soft`, `--theme-ink-muted` | text, secondary text, labels and notes |
-| `--theme-accent-0` to `--theme-accent-9` | the indigo-blue ramp; `--theme-link`, `--theme-primary` and Redmine's blue ramp point into it |
+| `--theme-accent-0` to `--theme-accent-9` | the grey ramp; Redmine's blue ramp points into it. `--theme-primary` is near-black (white in dark) and `--theme-link` is the ink colour |
 | `--theme-status-new`, `-in-progress`, `-resolved`, `-feedback`, `-closed`, `-rejected` | status colours, by Redmine's default status ids 1 to 6 |
 | `--theme-success`, `--theme-warning`, `--theme-danger`, `--theme-danger-strong` | meaning colours (priority High, Urgent, Immediate) |
 | `--theme-radius-small`, `--theme-radius`, `--theme-radius-panel`, `--theme-radius-pill` | corners of fields, cards, panels and chips |
@@ -159,8 +160,8 @@ fonts, change `--theme-font` and `--theme-font-monospace` in `obsidian/styleshee
 
 ## Dark mode
 
-Dark mode follows your system setting (`prefers-color-scheme`): near-black with a cool tint, panels a step lighter than the page,
-light ink, and the indigo lifted so it reads on dark. Code blocks stay light, since Redmine's syntax colours are made for a
+Dark mode follows your system setting (`prefers-color-scheme`): neutral near-black, panels a step lighter than the page,
+light ink, and the primary colour turned white so it reads on dark. Code blocks stay light, since Redmine's syntax colours are made for a
 light background. To keep Obsidian light-only, remove the line `@import url(dark.css);` from `obsidian/stylesheets/responsive.css`;
 every dark value is in that one file.
 

@@ -8,88 +8,88 @@
   /* Surfaces: a white page and white panels, told apart by hairlines and not by shadows. */
   --theme-page: #ffffff;
   --theme-surface: #ffffff;
-  --theme-surface-sunken: #fafafb;      /* attribute panels, journal headers, table stripes, the sidebar */
-  --theme-surface-hover: #eef2ff;       /* hovered rows and menu items: the palest indigo */
-  --theme-line: #e3e5ea;                /* row lines and panel borders */
-  --theme-line-soft: #eceef2;           /* column lines, chips for low priority and closed */
-  --theme-line-strong: #868b9b;         /* field borders: 3:1 against the page and the panels, as controls need */
+  --theme-surface-sunken: #fafafa;      /* attribute panels, journal headers, table stripes, the sidebar */
+  --theme-surface-hover: #f0f0f0;       /* hovered rows and menu items: a pale grey */
+  --theme-line: #e4e4e4;                /* row lines and panel borders */
+  --theme-line-soft: #ececec;           /* column lines, chips for low priority and closed */
+  --theme-line-strong: #858585;         /* field borders: 3:1 against the page and the panels, as controls need */
 
-  /* Text. Cool greys with almost no tint. */
-  --theme-ink: #14161c;
-  --theme-ink-soft: #2c303d;
-  --theme-ink-muted: #565c6d;
+  /* Text. Neutral greys, no tint. */
+  --theme-ink: #111111;
+  --theme-ink-soft: #2b2b2b;
+  --theme-ink-muted: #595959;
   --theme-ink-on-colour: #ffffff;
-  --theme-ink-on-light-colour: #14161c;
+  --theme-ink-on-light-colour: #111111;
 
-  /* The accent: one indigo-blue, light to dark. Step 6 is the button colour and the link colour. */
-  --theme-accent-0: #eef2ff;
-  --theme-accent-1: #dde6ff;
-  --theme-accent-2: #c3d2ff;
-  --theme-accent-3: #9db4ff;
-  --theme-accent-4: #6b8cff;
-  --theme-accent-5: #3f76ff;
-  --theme-accent-6: #2f5ee0;
-  --theme-accent-7: #254bb8;
-  --theme-accent-8: #1c3a8f;
-  --theme-accent-9: #142a6b;
-  --theme-accent-1-rgb: 221, 230, 255;
+  /* The accent: a grey ramp, light to near-black. Step 6 is near-black; the buttons are #111111 and links use the ink. */
+  --theme-accent-0: #f5f5f5;
+  --theme-accent-1: #ebebeb;
+  --theme-accent-2: #d9d9d9;
+  --theme-accent-3: #b3b3b3;
+  --theme-accent-4: #8c8c8c;
+  --theme-accent-5: #595959;
+  --theme-accent-6: #1a1a1a;
+  --theme-accent-7: #000000;
+  --theme-accent-8: #000000;
+  --theme-accent-9: #000000;
+  --theme-accent-1-rgb: 235, 235, 235;
 
-  /* A violet that appears only at the edges: the text selection, the focus halo, the end of the mark's gradient. */
-  --theme-secondary: #8b5cf6;
-  --theme-secondary-pale: #f3efff;
+  /* A light grey for the text selection, and an amber for search highlights. */
+  --theme-secondary: #bdbdbd;
+  --theme-secondary-pale: #f0f0f0;
   --theme-tertiary: #f08a24;
   --theme-tertiary-pale: #fdf1e3;
-  --theme-accent-pale: #eef2ff;
+  --theme-accent-pale: #f5f5f5;
 
-  --theme-link: var(--theme-accent-6);
-  --theme-link-hover: var(--theme-accent-7);
-  --theme-primary: var(--theme-accent-6);
-  --theme-primary-hover: var(--theme-accent-7);
+  --theme-link: var(--theme-ink);       /* links are ink, underlined by flourishes.css */
+  --theme-link-hover: #000000;
+  --theme-primary: #111111;
+  --theme-primary-hover: #333333;
   --theme-ink-on-primary: #ffffff;
-  --theme-primary-background: #2f5ee0;
-  --theme-primary-background-hover: #254bb8;
+  --theme-primary-background: #111111;
+  --theme-primary-background-hover: #333333;
   --theme-redmine-accent: var(--theme-accent-6);
-  --theme-redmine-accent-rgb: 47, 94, 224;
-  --theme-selected-tab-border-image: none;
+  --theme-redmine-accent-rgb: 26, 26, 26;
+  --theme-selected-tab-border-image: none;   /* the selected tab keeps a plain 2px line in the primary colour */
 
   /* The header: plain white with a hairline under it, ink on it. */
   --theme-header-background: #ffffff;
   --theme-header-background-solid: #ffffff;
   --theme-header-ink: var(--theme-ink);
   --theme-header-link: var(--theme-ink-soft);
-  --theme-header-hover-background: rgba(20, 22, 28, 0.06);
-  --theme-header-line: #e3e5ea;
-  --theme-header-field-background: #fafafb;
-  --theme-header-field-border: #868b9b;
+  --theme-header-hover-background: rgba(17, 17, 17, 0.06);
+  --theme-header-line: #e4e4e4;
+  --theme-header-field-background: #fafafa;
+  --theme-header-field-border: #858585;
   --theme-mark-image: url("../images/obsidian-mark.svg");
 
   /* The project sidebar, in the sidebar layout only ("layout": "sidebar" in theme.json). */
   --theme-sidebar-width: 216px;
   --theme-sidebar-background: var(--theme-surface-sunken);
   --theme-sidebar-line: var(--theme-line);
-  --theme-sidebar-tile: linear-gradient(135deg, var(--theme-accent-6), var(--theme-secondary));
+  --theme-sidebar-tile: linear-gradient(135deg, #111111, #4d4d4d);
   --theme-sidebar-hover-background: var(--theme-line-soft);
-  --theme-sidebar-selected-background: var(--theme-accent-0);
-  --theme-sidebar-selected-ink: var(--theme-accent-7);
+  --theme-sidebar-selected-background: #ebebeb;
+  --theme-sidebar-selected-ink: #000000;
   --theme-sidebar-selected-edge: transparent;   /* Obsidian marks the selected item by tint and weight, with no edge bar */
 
   /* Buttons that are not the primary: white with a grey edge. Delete buttons: a tint of red. */
   --theme-button-background: #ffffff;
-  --theme-button-border: #868b9b;
-  --theme-button-ink: #2c303d;
+  --theme-button-border: #858585;
+  --theme-button-ink: #2b2b2b;
   --theme-danger-soft: #fdecec;
   --theme-danger-soft-border: #f1b9b9;
   --theme-danger-ink: #a3232b;
 
-  /* Focus: an indigo outline with a pale halo. */
-  --theme-focus: var(--theme-accent-5);
-  --theme-focus-halo: rgba(63, 118, 255, 0.28);
+  /* Focus: a near-black outline with a grey halo. */
+  --theme-focus: #111111;
+  --theme-focus-halo: rgba(17, 17, 17, 0.22);
 
   /* Meaning. Status ids in a default Redmine: 1 New, 2 In Progress, 3 Resolved, 4 Feedback, 5 Closed, 6 Rejected. */
-  --theme-status-new: #6b7185;           /* New is grey and Closed is green, as in 1.0.0 */
+  --theme-status-new: #7a7a7a;           /* New is grey and Closed is green, as in 1.0.0 */
   --theme-status-in-progress: #d99a0b;
   --theme-status-resolved: #2f9e6b;
-  --theme-status-feedback: #8b5cf6;
+  --theme-status-feedback: #3d3d3d;
   --theme-status-closed: #2f9e6b;
   --theme-status-rejected: #d64545;
   --theme-success: #2f9e6b;
@@ -114,7 +114,7 @@
   --theme-avatar-color-0: #c92a2a;
   --theme-avatar-color-1: #b4540a;
   --theme-avatar-color-7: #c2255c;
-  --theme-activity-edit-ink: #4b3f78;
+  --theme-activity-edit-ink: #444444;
   --theme-activity-wiki-ink: #7a3f22;
   --theme-search-highlight-ink: var(--theme-ink);
   --theme-diff-removed: #fde7e9;
@@ -124,12 +124,12 @@
 
   /* The script's additions: the round initials beside an assignee (six colours, white initials on each) and the border of the
      chip round a date in a list. */
-  --theme-initials-0: #4b55c7;
-  --theme-initials-1: #2f5ee0;
+  --theme-initials-0: #7a4e8c;
+  --theme-initials-1: #3d3d3d;
   --theme-initials-2: #1f845a;
   --theme-initials-3: #a54800;
   --theme-initials-4: #a8344b;
-  --theme-initials-5: #206a83;
+  --theme-initials-5: #5f6b3a;
   --theme-date-chip-border: var(--theme-neutral-4);
 
   /* Shape and depth: small corners everywhere, and almost no shadow. */
@@ -143,9 +143,9 @@
   --theme-border-width: 1px;
   --theme-border-style: solid;
   --theme-shadow-card: none;
-  --theme-shadow-popup: 0 10px 28px rgba(20, 22, 28, 0.16);
+  --theme-shadow-popup: 0 10px 28px rgba(0, 0, 0, 0.16);
   --theme-shadow-primary-button: none;
-  --theme-shadow-header-scrolled: 0 1px 0 rgba(20, 22, 28, 0.06);
+  --theme-shadow-header-scrolled: 0 1px 0 rgba(0, 0, 0, 0.06);
   --theme-space-small: 8px;
   --theme-space: 16px;
   --theme-space-large: 24px;
@@ -160,28 +160,28 @@
   --theme-font-monospace: "Noto Sans Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   --theme-title-font: var(--theme-font);
   --theme-title-weight: 600;
-  --theme-code-background: #f4f5f7;
-  --theme-code-ink: #14161c;
+  --theme-code-background: #f5f5f5;
+  --theme-code-ink: #111111;
   --theme-syntax-keyword: #006b00;
 
   /* Icons drawn in a stylesheet carry their colour inside the image. */
-  --theme-select-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23565c6d' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  --theme-search-field-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23565c6d' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
-  --theme-project-jump-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23565c6d' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  --theme-select-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23595959' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  --theme-search-field-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23595959' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+  --theme-project-jump-arrow-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23595959' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
 
   /* Redmine's grey ramp (--oc-gray-0 to -9) and its white. */
   --theme-redmine-white: #ffffff;
-  --theme-neutral-0: #fafafb;
-  --theme-neutral-1: #f4f5f7;
-  --theme-neutral-2: #eceef2;
-  --theme-neutral-3: #e3e5ea;
-  --theme-neutral-4: #d3d6de;
-  --theme-neutral-5: #646a7b;
-  --theme-neutral-6: #565c6d;
-  --theme-neutral-7: #434859;
-  --theme-neutral-8: #2c303d;
-  --theme-neutral-9: #14161c;
-  --theme-neutral-9-rgb: 20, 22, 28;
+  --theme-neutral-0: #fafafa;
+  --theme-neutral-1: #f5f5f5;
+  --theme-neutral-2: #ececec;
+  --theme-neutral-3: #e4e4e4;
+  --theme-neutral-4: #d4d4d4;
+  --theme-neutral-5: #666666;
+  --theme-neutral-6: #595959;
+  --theme-neutral-7: #444444;
+  --theme-neutral-8: #2b2b2b;
+  --theme-neutral-9: #111111;
+  --theme-neutral-9-rgb: 17, 17, 17;
 }
 
 /* Redmine's palette, pointed at the tokens. Redmine 7 colours itself with the Open Color variables (--oc-*) and a few

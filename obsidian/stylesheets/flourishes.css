@@ -3,10 +3,8 @@
  * GNU General Public License, version 2 or later. See the LICENSE file.
  * Generated from the shared base of the Rubylode themes: a change made here is overwritten by the next build. */
 
-/* Obsidian's own touches, the ones tokens cannot express: a smaller type size, and an issue list that marks status with a
- * state circle and priority with a small square, as plain cells, where the shared base draws chips. */
-
-html, body { font-size: 13px; }
+/* Obsidian's own touches, the ones tokens cannot express: an issue list that marks status with a state circle and priority
+ * with a small square, as plain cells, where the shared base draws chips. */
 
 /* Status: an empty circle for New, half for In Progress and Feedback, full for Resolved, Closed and Rejected. */
 table.list.issues > tbody > tr.issue > td.status,
@@ -53,9 +51,9 @@ table.list.issues > tbody > tr.issue:is(.priority-4, .priority-5) > td.priority:
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--priority-colour) 25%, transparent);
 }
 
-/* The project tabs follow the smaller type, so a project with many modules still fits at 1100px without scroll buttons. */
+/* Tighter project tabs, so a project with many modules fits in more of the two-row header before the scroll buttons. */
 @media screen and (min-width: 900px) {
-  #main-menu li a { padding: 0 9px; font-size: 13px; }
+  #main-menu li a { padding: 0 9px; }
 }
 
 /* The script's additions (extra.js). Each one is a nicety: without the script the list shows plain dates and names. */

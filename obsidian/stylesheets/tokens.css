@@ -153,9 +153,11 @@
   --theme-top-bar-height: 44px;
   --theme-project-bar-height: 46px;
 
-  /* Type: Inter when it is installed, the system's own fonts otherwise. No font files are shipped. */
-  --theme-font: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  --theme-font-monospace: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  /* Type: the bundled Noto Sans and Noto Sans Mono (in fonts/, SIL Open Font License 1.1), the system's own fonts after them.
+     --theme-font-size is the size of running text; every other text size follows it. */
+  --theme-font-size: 16px;
+  --theme-font: "Noto Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --theme-font-monospace: "Noto Sans Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   --theme-title-font: var(--theme-font);
   --theme-title-weight: 600;
   --theme-code-background: #f4f5f7;

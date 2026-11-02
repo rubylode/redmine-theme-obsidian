@@ -42,6 +42,7 @@ The screenshots come from the demo Redmine in this repository; the people, proje
 - [What is covered](#what-is-covered)
 - [Rubylode plugins](#rubylode-plugins)
 - [Customising](#customising)
+- [Fonts](#fonts)
 - [Dark mode](#dark-mode)
 - [Accessibility](#accessibility)
 - [Compatibility](#compatibility)
@@ -63,7 +64,7 @@ The screenshots come from the demo Redmine in this repository; the people, proje
   tooltip. Above the issue list, the Gantt chart, the calendar and the activity page, a switch moves between Issues, Gantt,
   Calendar and Activity.
 - On the issue page, status and priority are chips, and the card has an edge in the status colour.
-- Corners are 6px nearly everywhere and type is 13px. Rows are a little tighter than in the other Rubylode themes.
+- Corners are 6px nearly everywhere. Rows are a little tighter than in the other Rubylode themes.
 
 ## Install
 
@@ -121,12 +122,13 @@ start with `--theme-` and are the same in every Rubylode theme. The main ones:
 | `--theme-success`, `--theme-warning`, `--theme-danger`, `--theme-danger-strong` | meaning colours (priority High, Urgent, Immediate) |
 | `--theme-radius-small`, `--theme-radius`, `--theme-radius-panel`, `--theme-radius-pill` | corners of fields, cards, panels and chips |
 | `--theme-border-width`, `--theme-border-style`, `--theme-density` | panel borders, and the height of table rows and list items |
+| `--theme-font-size` | the size of running text (16px); every other text size follows it |
 | `--theme-font`, `--theme-font-monospace`, `--theme-title-font`, `--theme-title-weight` | the text, code and heading fonts |
 
 The rest (messages, avatars, diffs, the Gantt chart, the header heights, the icons drawn in the stylesheet) are listed with a
 comment each in `tokens.css`. If you used the old `--obsidian-*` names, the rename table is in the changelog.
 
-Obsidian's own touches that tokens cannot express (the 13px type, the state circles and priority squares, the tab size, the
+Obsidian's own touches that tokens cannot express (the state circles and priority squares, the tab padding, the
 date chips, the initials and the view switch) are in `obsidian/stylesheets/flourishes.css`, loaded last. The sidebar is
 `obsidian/stylesheets/sidebar-layout.css`, set by the `--theme-sidebar-*` tokens (width, ground, tile, hover and selected
 item).
@@ -146,6 +148,14 @@ The date chips, the initials and the switch stay at every width.
 Status and priority colours are matched by Redmine's default ids (statuses 1 New to 6 Rejected, priorities 1 Low to 5
 Immediate). If yours differ, change the ids in the issue list sections of `obsidian/stylesheets/structure.css` and in
 `flourishes.css`.
+
+## Fonts
+
+Obsidian ships its own fonts, so text looks the same on every system and nothing is loaded from another site: Noto Sans for
+text and Noto Sans Mono for code, as woff2 files in `obsidian/fonts/` (latin and latin-ext). Both are under the SIL Open
+Font License 1.1; the licence texts are in the same folder. A browser downloads a file only when a page uses it. To use other
+fonts, change `--theme-font` and `--theme-font-monospace` in `obsidian/stylesheets/tokens.css`. The size of running text is
+`--theme-font-size` (16px), and every other text size follows it.
 
 ## Dark mode
 

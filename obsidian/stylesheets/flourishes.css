@@ -57,3 +57,66 @@ table.list.issues > tbody > tr.issue:is(.priority-4, .priority-5) > td.priority:
 @media screen and (min-width: 900px) {
   #main-menu li a { padding: 0 9px; font-size: 13px; }
 }
+
+/* The script's additions (extra.js). Each one is a nicety: without the script the list shows plain dates and names. */
+
+/* A chip round each date in a list. */
+.date-chip {
+  display: inline-block;
+  padding: 1px 8px;
+  border: var(--theme-border-width) var(--theme-border-style) var(--theme-date-chip-border);
+  border-radius: var(--theme-radius-small);
+  font-size: 0.923em;
+  white-space: nowrap;
+}
+
+/* Round initials in place of the assignee's name, which stays for screen readers and in the tooltip. */
+.assignee-initials {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 20px;
+  block-size: 20px;
+  margin-inline-end: 6px;
+  border-radius: var(--theme-radius-round);
+  background: var(--theme-initials-0);
+  color: var(--theme-ink-on-colour);
+  font-size: 0.5625rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+.assignee-initials.tone-1 { background: var(--theme-initials-1); }
+.assignee-initials.tone-2 { background: var(--theme-initials-2); }
+.assignee-initials.tone-3 { background: var(--theme-initials-3); }
+.assignee-initials.tone-4 { background: var(--theme-initials-4); }
+.assignee-initials.tone-5 { background: var(--theme-initials-5); }
+table.list td.assigned_to { white-space: nowrap; }
+table.list td.assigned_to a.assignee-name {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The switch above the issue list: Issues, Gantt, Calendar, Activity. */
+nav.view-switch {
+  display: inline-flex;
+  gap: 2px;
+  margin-block: 0 12px;
+  padding: 2px;
+  border: var(--theme-border-width) var(--theme-border-style) var(--theme-line);
+  border-radius: var(--theme-radius-panel);
+  background: var(--theme-surface-sunken);
+}
+nav.view-switch a, nav.view-switch a:visited {
+  padding: 3px 12px;
+  border-radius: var(--theme-radius-small);
+  color: var(--theme-ink-muted);
+}
+nav.view-switch a:hover { background: var(--theme-line-soft); color: var(--theme-ink); text-decoration: none; }
+nav.view-switch a.selected, nav.view-switch a.selected:hover {
+  background: var(--theme-sidebar-selected-background);
+  color: var(--theme-sidebar-selected-ink);
+  font-weight: 600;
+}

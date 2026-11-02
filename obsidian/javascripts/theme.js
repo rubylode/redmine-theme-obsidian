@@ -43,3 +43,127 @@
     start();
   }
 })();
+
+/* Helpers for a theme's own script (extra.js), which follows them in this file. They read the page and change nothing.
+ *   RubylodeTheme.ready(callback)       run callback once the page is parsed (at once when it already is)
+ *   RubylodeTheme.initials(name)        "Jane van Dyke" gives "JD", "admin" gives "A", an empty name ""
+ *   RubylodeTheme.tone(text, count)     a whole number from 0 to count - 1 (6 by default), always the same for the same text
+ *   RubylodeTheme.currentUser()         { name, login } of the person signed in, or null
+ *   RubylodeTheme.currentProject()      { identifier, name, url } of the project the page belongs to, or null */
+(function () {
+  "use strict";
+
+  function ready(callback) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", callback);
+    } else {
+      callback();
+    }
+  }
+
+  function initials(name) {
+    var words = String(name || "").trim().split(/\s+/).filter(Boolean);
+    if (words.length === 0) { return ""; }
+    var letters = words[0].charAt(0) + (words.length > 1 ? words[words.length - 1].charAt(0) : "");
+    return letters.toUpperCase();
+  }
+
+  function tone(text, count) {
+    var sum = 0;
+    var value = String(text || "");
+    for (var index = 0; index < value.length; index++) { sum += value.charCodeAt(index); }
+    return sum % (count || 6);
+  }
+
+  function currentUser() {
+    var name = document.querySelector("#account .user-info .user-name");
+    var login = document.querySelector("#account .user-info .user-login");
+    if (!name && !login) { return null; }
+    return {
+      name: name ? name.textContent.trim() : "",
+      login: login ? login.textContent.trim().replace(/^@/, "") : ""
+    };
+  }
+
+  function currentProject() {
+    var match = document.body.className.match(/(?:^|\s)project-(\S+)/);
+    if (!match) { return null; }
+    var current = document.querySelector("#header h1 .current-project");
+    var overview = document.querySelector("#main-menu a.overview");
+    return {
+      identifier: match[1],
+      name: current ? current.textContent.trim() : "",
+      url: overview ? overview.getAttribute("href") : null
+    };
+  }
+
+  window.RubylodeTheme = { ready: ready, initials: initials, tone: tone, currentUser: currentUser, currentProject: currentProject };
+})();
+
+/* Rubylode Obsidian's own script, from themes/obsidian/extra.js. */
+/* Obsidian's own script, built in after the shared helpers. It adds three things CSS cannot: a chip round the dates in lists,
+ * round initials beside assignees, and a switch for Issues, Gantt, Calendar and Activity above the issue list. It reads the
+ * page and writes nothing to Redmine. Without it the theme still works, with plain dates, names and the project menu. */
+(function () {
+  "use strict";
+
+  var DATE_COLUMNS = "table.list td.updated_on, table.list td.created_on, table.list td.due_date, table.list td.start_date";
+  var VIEW_PAGES = ".controller-issues.action-index, .controller-gantts, .controller-calendars, .controller-activities";
+  var VIEW_MENU_ITEMS = ["issues", "gantt", "calendar", "activity"];
+
+  function addDateChips() {
+    document.querySelectorAll(DATE_COLUMNS).forEach(function (cell) {
+      var text = cell.textContent.trim();
+      if (!text || cell.querySelector(".date-chip")) { return; }
+      var chip = document.createElement("span");
+      chip.className = "date-chip";
+      chip.textContent = text;
+      cell.textContent = "";
+      cell.appendChild(chip);
+    });
+  }
+
+  function addAssigneeInitials() {
+    document.querySelectorAll("table.list td.assigned_to").forEach(function (cell) {
+      var link = cell.querySelector("a");
+      if (!link || cell.querySelector(".assignee-initials")) { return; }
+      var name = link.textContent.trim();
+      var badge = document.createElement("span");
+      badge.className = "assignee-initials tone-" + RubylodeTheme.tone(name, 6);
+      badge.setAttribute("aria-hidden", "true");
+      badge.textContent = RubylodeTheme.initials(name);
+      badge.title = name;
+      link.classList.add("assignee-name");
+      cell.insertBefore(badge, cell.firstChild);
+    });
+  }
+
+  function addViewSwitch() {
+    var title = document.querySelector("#content > h2");
+    if (!document.body.matches(VIEW_PAGES) || !title || document.querySelector("nav.view-switch")) { return; }
+    var sources = VIEW_MENU_ITEMS.map(function (name) {
+      return document.querySelector("#main-menu a." + name);
+    }).filter(Boolean);
+    if (sources.length < 2) { return; }
+    var nav = document.createElement("nav");
+    nav.className = "view-switch";
+    nav.setAttribute("aria-label", "Views");
+    sources.forEach(function (source) {
+      var link = document.createElement("a");
+      link.href = source.getAttribute("href");
+      link.textContent = source.textContent.trim();
+      if (source.pathname === window.location.pathname) {
+        link.className = "selected";
+        link.setAttribute("aria-current", "page");
+      }
+      nav.appendChild(link);
+    });
+    title.insertAdjacentElement("afterend", nav);
+  }
+
+  RubylodeTheme.ready(function () {
+    addDateChips();
+    addAssigneeInitials();
+    addViewSwitch();
+  });
+})();

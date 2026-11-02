@@ -58,6 +58,11 @@
     --theme-danger-soft-border: #6b3440;
     --theme-danger-ink: #f2a7ae;
 
+    /* The sidebar is a step lighter than the page; the selected item is a pale indigo on deep indigo. */
+    --theme-sidebar-background: var(--theme-surface);
+    --theme-sidebar-selected-background: var(--theme-accent-1);
+    --theme-sidebar-selected-ink: var(--theme-accent-9);
+
     --theme-focus: #7f9bff;
     --theme-focus-halo: rgba(127, 155, 255, 0.3);
 

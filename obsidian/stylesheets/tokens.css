@@ -70,8 +70,8 @@
   --theme-sidebar-tile: linear-gradient(135deg, var(--theme-accent-6), var(--theme-secondary));
   --theme-sidebar-hover-background: var(--theme-line-soft);
   --theme-sidebar-selected-background: var(--theme-accent-0);
-  --theme-sidebar-selected-ink: var(--theme-accent-8);
-  --theme-sidebar-selected-edge: var(--theme-accent-6);
+  --theme-sidebar-selected-ink: var(--theme-accent-7);
+  --theme-sidebar-selected-edge: transparent;   /* Obsidian marks the selected item by tint and weight, with no edge bar */
 
   /* Buttons that are not the primary: white with a grey edge. Delete buttons: a tint of red. */
   --theme-button-background: #ffffff;
@@ -86,11 +86,11 @@
   --theme-focus-halo: rgba(63, 118, 255, 0.28);
 
   /* Meaning. Status ids in a default Redmine: 1 New, 2 In Progress, 3 Resolved, 4 Feedback, 5 Closed, 6 Rejected. */
-  --theme-status-new: #2f5ee0;
+  --theme-status-new: #6b7185;           /* New is grey and Closed is green, as in 1.0.0 */
   --theme-status-in-progress: #d99a0b;
   --theme-status-resolved: #2f9e6b;
   --theme-status-feedback: #8b5cf6;
-  --theme-status-closed: #6b7185;
+  --theme-status-closed: #2f9e6b;
   --theme-status-rejected: #d64545;
   --theme-success: #2f9e6b;
   --theme-warning: #f08a24;
@@ -121,6 +121,16 @@
   --theme-diff-added: #e1f3e6;
   --theme-gantt-late: #f08a24;
   --theme-gantt-late-label: #8a4a12;
+
+  /* The script's additions: the round initials beside an assignee (six colours, white initials on each) and the border of the
+     chip round a date in a list. */
+  --theme-initials-0: #4b55c7;
+  --theme-initials-1: #2f5ee0;
+  --theme-initials-2: #1f845a;
+  --theme-initials-3: #a54800;
+  --theme-initials-4: #a8344b;
+  --theme-initials-5: #206a83;
+  --theme-date-chip-border: var(--theme-neutral-4);
 
   /* Shape and depth: small corners everywhere, and almost no shadow. */
   --theme-radius-highlight: 3px;

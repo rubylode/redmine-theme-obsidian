@@ -9,19 +9,16 @@ All notable changes to this theme. The format follows [Keep a Changelog](https:/
 - The theme is now built on the shared Rubylode theme base. The single stylesheet is replaced by `tokens.css`, `structure.css`, `plugins.css`, `dark.css` and `flourishes.css`, loaded from `application.css` and `responsive.css`.
 - The Rubylode plugins now take the theme's colours: Projects, Home, To-do, Uptime Kuma, GlitchTip, Windmill, Beszel, Stats and the New issue button.
 - The pages the old stylesheet left to Redmine are now styled: the home page, the project overview, My page, the roadmap, an issue with subtasks, the Gantt chart, the calendar, spent time, project settings and administration.
-- The header is the base's two rows, on a white ground: the top bar with the mark, the global links, the search and the account, and the project name and tabs below it.
-- The full-height sidebar on screens 1100px and wider is gone. The project tabs sit in the second header row at every width.
-- The mark in the top bar is the small indigo-to-violet square the old sidebar showed before the project name, now in `images/obsidian-mark.svg`.
+- The full-height sidebar is kept on screens 1100px and wider, now 216px wide and set by the base's sidebar tokens. It holds the project name behind the indigo-to-violet tile and the project menu, or the administration menu. A thin bar across the top holds the global links, the New issue button, the search, the project switcher and the account. The selected item is a pale indigo tint with no edge bar, as before.
+- From 900px to 1099px the header is the base's two rows, on a white ground: the mark, the global links, the search and the account, then the project name and its tabs. Below 900px it is Redmine's phone layout. The sign-in page keeps the two rows at every width.
+- The mark is the small indigo-to-violet square. It is the tile before the project name in the sidebar, and in `images/obsidian-mark.svg` for the top bar of the two-row header and the sign-in page.
 - Type is 13px, and the project tabs are 13px, so a project with many modules still fits at 1100px.
 - Field and button borders are darker (`#868b9b` in light) so that they reach 3:1 against the page, as WCAG asks of controls.
 - In dark, panels are a step lighter than the page. They used to be the same colour as it.
-- Closed is a full grey circle and Resolved a full green one. New is a blue empty circle. Closed used to be green and New grey.
+- Closed is a full green circle again and New an empty grey one, as in 1.0.0. Resolved is a full green circle too.
 - Status and priority on the issue page are chips with a dot and a bar meter, as in the base.
-- `javascripts/theme.js` now tags status groups and the scrolled header. The base's script replaces the old one.
-
-### Removed
-
-- The date chips, the assignee initials and the Issues, Gantt, Calendar and Activity switch above the list. They came from the old script, which the base's script replaces.
+- `javascripts/theme.js` now tags status groups and the scrolled header, and ends with Obsidian's own script. The base's script comes first, so the old one is replaced.
+- The date chips, the assignee initials and the Issues, Gantt, Calendar and Activity switch above the list are kept. They are added by the script, and the theme works without it. Their colours are the new `--theme-initials-0` to `--theme-initials-5` and `--theme-date-chip-border` tokens.
 
 ### Migration
 
@@ -35,7 +32,8 @@ The token names changed, so a stylesheet of your own that overrides `--obsidian-
 | `--obsidian-radius` | `--theme-radius-small` |
 | `--obsidian-shadow` | `--theme-shadow-popup` (the colour is inside the value) |
 | `--obsidian-blue-0` to `--obsidian-blue-8` | `--theme-accent-0` to `--theme-accent-8` |
-| `--obsidian-sidebar-width`, `--obsidian-phone-menu`, `--obsidian-phone-menu-ink` | none; the sidebar is gone and the phone menu uses `--theme-surface` and `--theme-ink` |
+| `--obsidian-sidebar-width` | `--theme-sidebar-width` |
+| `--obsidian-phone-menu`, `--obsidian-phone-menu-ink` | none; the phone menu uses `--theme-surface` and `--theme-ink` |
 | `--oc-gray-0` to `--oc-gray-9` | `--theme-neutral-0` to `--theme-neutral-9` |
 | `--oc-white` | `--theme-redmine-white` |
 | `--oc-blue-0` to `--oc-blue-6`, `--oc-indigo-*` | `--theme-accent-0` to `--theme-accent-6` |
@@ -48,7 +46,7 @@ token, not the variable. Every token is listed in the README and commented in `t
 
 ### Accessibility
 
-- The page check now loads 29 pages with every Rubylode plugin mounted: 116 runs in light and dark, at desktop and phone width, with no console errors, no failed requests, no sideways scrolling and no text below AA. The measured ratios are in `docs/accessibility.md`.
+- The page check now loads 29 pages with every Rubylode plugin mounted: 116 runs in light and dark, at desktop and phone width, with no console errors, no failed requests, no sideways scrolling and no text below AA. The widths between, 900px to 1100px, were loaded the same way. The measured ratios are in `docs/accessibility.md`.
 
 ### Tooling
 

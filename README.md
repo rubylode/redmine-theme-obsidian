@@ -2,10 +2,12 @@
 
 A theme for Redmine 7 and up: a white page with hairlines, one indigo-blue, small corners and state circles and priority squares in the issue list.
 
-It is plain CSS plus one small script (`javascripts/theme.js`, about 45 lines), with no plugin, no build step and no change to
-Redmine itself. The script only reads the page: it puts a status dot beside the group name in an issue list grouped by status,
-and gives the top bar a hairline shadow once the page scrolls. Without it the theme still works. It is built on the shared Rubylode
-theme base, so it covers the same pages as the other Rubylode themes and styles the Rubylode plugins.
+It is plain CSS plus one small script (`javascripts/theme.js`, about 170 lines), with no plugin, no build step and no change to
+Redmine itself. The script only reads the page. It puts a status dot beside the group name in an issue list grouped by status,
+gives the top bar a hairline shadow once the page scrolls, and adds three things of Obsidian's own: a chip round the dates in
+lists, round initials beside assignees, and a switch for Issues, Gantt, Calendar and Activity above the issue list. Without the
+script the theme still works, with plain dates and names and the project menu alone. It is built on the shared Rubylode theme
+base, so it covers the same pages as the other Rubylode themes and styles the Rubylode plugins.
 
 Light and dark are equal here. Dark follows your system setting (see [Dark mode](#dark-mode)).
 
@@ -51,10 +53,15 @@ The screenshots come from the demo Redmine in this repository; the people, proje
 
 - A white page, and white panels told apart by hairlines instead of shadows. Greys have almost no tint, and the only colour
   that stays is one indigo-blue for links, selected items, focus and the main action.
-- A two-row header on a white ground. The top bar holds a small indigo-to-violet mark, the global links, the search and project
-  switcher, and your avatar. Below it, the project name and its tabs, the current one underlined in indigo.
+- A full-height sidebar, 216px wide, on the left. It holds the project name behind a small indigo-to-violet tile and the project
+  menu, with the selected item in a pale indigo. On the administration pages it holds the administration menu. A thin bar
+  across the top holds the global links, the New issue button, the search and project switcher, and your avatar.
 - The issue list marks status with a circle (empty for New, half for In Progress and Feedback, full for Resolved, Closed and
-  Rejected) and priority with a small square, as plain cells. Rows have hairlines and faint stripes, and hover is a pale indigo.
+  Rejected) and priority with a small square, as plain cells. New is grey and Closed is green. Rows have hairlines and faint
+  stripes, and hover is a pale indigo.
+- Dates in lists sit in a small chip, and the assignee is shown as round initials in one of six colours, with the name in the
+  tooltip. Above the issue list, the Gantt chart, the calendar and the activity page, a switch moves between Issues, Gantt,
+  Calendar and Activity.
 - On the issue page, status and priority are chips, and the card has an edge in the status colour.
 - Corners are 6px nearly everywhere and type is 13px. Rows are a little tighter than in the other Rubylode themes.
 
@@ -119,8 +126,22 @@ start with `--theme-` and are the same in every Rubylode theme. The main ones:
 The rest (messages, avatars, diffs, the Gantt chart, the header heights, the icons drawn in the stylesheet) are listed with a
 comment each in `tokens.css`. If you used the old `--obsidian-*` names, the rename table is in the changelog.
 
-Obsidian's own touches that tokens cannot express (the 13px type, the state circles and priority squares, the tab size) are
-in `obsidian/stylesheets/flourishes.css`, loaded last.
+Obsidian's own touches that tokens cannot express (the 13px type, the state circles and priority squares, the tab size, the
+date chips, the initials and the view switch) are in `obsidian/stylesheets/flourishes.css`, loaded last. The sidebar is
+`obsidian/stylesheets/sidebar-layout.css`, set by the `--theme-sidebar-*` tokens (width, ground, tile, hover and selected
+item).
+
+### Widths
+
+The sidebar needs room, so it falls back as the window narrows:
+
+- 1100px and wider: the sidebar and the thin top bar described above.
+- From 900px to 1099px: the base's two rows. The first row holds the mark, the global links, the New issue button, the search
+  and the person menu. The second holds the project name and its tabs, which scroll behind two buttons when they do not fit.
+- Below 900px: Redmine's own phone layout, with the project menu behind the menu button and the New issue button in the page.
+- The sign-in page keeps the two rows at every width.
+
+The date chips, the initials and the switch stay at every width.
 
 Status and priority colours are matched by Redmine's default ids (statuses 1 New to 6 Rejected, priorities 1 Low to 5
 Immediate). If yours differ, change the ids in the issue list sections of `obsidian/stylesheets/structure.css` and in

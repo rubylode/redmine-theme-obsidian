@@ -63,6 +63,16 @@
   --theme-header-field-border: #868b9b;
   --theme-mark-image: url("../images/obsidian-mark.svg");
 
+  /* The project sidebar, in the sidebar layout only ("layout": "sidebar" in theme.json). */
+  --theme-sidebar-width: 216px;
+  --theme-sidebar-background: var(--theme-surface-sunken);
+  --theme-sidebar-line: var(--theme-line);
+  --theme-sidebar-tile: linear-gradient(135deg, var(--theme-accent-6), var(--theme-secondary));
+  --theme-sidebar-hover-background: var(--theme-line-soft);
+  --theme-sidebar-selected-background: var(--theme-accent-0);
+  --theme-sidebar-selected-ink: var(--theme-accent-8);
+  --theme-sidebar-selected-edge: var(--theme-accent-6);
+
   /* Buttons that are not the primary: white with a grey edge. Delete buttons: a tint of red. */
   --theme-button-background: #ffffff;
   --theme-button-border: #868b9b;

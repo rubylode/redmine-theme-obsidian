@@ -7,8 +7,8 @@ identify it (field borders) and for focus indicators.
 
 - The page check (`npm run check`) loads 29 pages in light and dark, at 1280px and 390px wide, and measures every visible
   piece of text against the colour stacked behind it. On 2026-11-02 against Redmine 7.0.2 with the Rubylode plugins mounted it
-  measured 2,957 text pairs per run at desktop width and 3,461 at phone width, in light and in dark, and found none below AA:
-  116 of 116 gated runs clean.
+  measured 2,942 text pairs per run at desktop width and 3,460 at phone width, in light and in dark, and found none below AA:
+  116 of 116 gated runs clean. At the 16px base size every measured pair also reaches 4.5:1, so none relies on the 3:1 allowance for large text.
 - The tokens, one pair at a time, below. Field borders and focus rings are not text, so the check does not see them, and it
   skips text over a gradient or an image. Chip colours are the mixes the stylesheet makes (`color-mix`), worked out on each of
   the three row colours a chip can sit on (panel, stripe, hovered row); the lowest is shown.

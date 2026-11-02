@@ -1,0 +1,59 @@
+/* Rubylode Obsidian, a theme for Redmine 7
+ * Copyright (C) 2026  Nick Gorbikoff
+ * GNU General Public License, version 2 or later. See the LICENSE file.
+ * Generated from the shared base of the Rubylode themes: a change made here is overwritten by the next build. */
+
+/* Obsidian's own touches, the ones tokens cannot express: a smaller type size, and an issue list that marks status with a
+ * state circle and priority with a small square, as plain cells, where the shared base draws chips. */
+
+html, body { font-size: 13px; }
+
+/* Status: an empty circle for New, half for In Progress and Feedback, full for Resolved, Closed and Rejected. */
+table.list.issues > tbody > tr.issue > td.status,
+table.list.issues > tbody > tr.issue:is(.priority-1, .priority-2, .priority-3, .priority-4, .priority-5) > td.priority {
+  inline-size: auto;
+  background-image: none;
+  background-clip: border-box;
+  color: var(--theme-ink);
+  font-size: inherit;
+  font-weight: 400;
+}
+table.list.issues > tbody > tr.issue > td.status::after,
+table.list.issues > tbody > tr.issue > td.priority::after { display: none; }
+
+table.list.issues > tbody > tr.issue { --state-fill: var(--chip); }
+table.list.issues > tbody > tr.issue.status-1 { --state-fill: transparent; }
+table.list.issues > tbody > tr.issue:is(.status-2, .status-4) { --state-fill: conic-gradient(var(--chip) 0 50%, transparent 0); }
+table.list.issues > tbody > tr.issue > td.status::before {
+  box-sizing: border-box;
+  inline-size: 13px;
+  block-size: 13px;
+  margin: 0 7px 0 0;
+  border: 2px solid var(--chip);
+  border-radius: var(--theme-radius-round);
+  background: var(--state-fill);
+  vertical-align: -2px;
+}
+
+/* Priority: a small square in the level's colour; the two highest get a soft ring. */
+table.list.issues > tbody > tr.issue { --priority-colour: var(--theme-line-strong); }
+table.list.issues > tbody > tr.issue.priority-2 { --priority-colour: var(--theme-accent-4); }
+table.list.issues > tbody > tr.issue.priority-3 { --priority-colour: var(--theme-warning); }
+table.list.issues > tbody > tr.issue.priority-4 { --priority-colour: var(--theme-danger); }
+table.list.issues > tbody > tr.issue.priority-5 { --priority-colour: var(--theme-danger-strong); }
+table.list.issues > tbody > tr.issue[class*="priority-"] > td.priority::before {
+  inline-size: 9px;
+  block-size: 9px;
+  margin: 0 7px 0 0;
+  border-radius: 2px;
+  background: var(--priority-colour);
+  vertical-align: 0;
+}
+table.list.issues > tbody > tr.issue:is(.priority-4, .priority-5) > td.priority::before {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--priority-colour) 25%, transparent);
+}
+
+/* The project tabs follow the smaller type, so a project with many modules still fits at 1100px without scroll buttons. */
+@media screen and (min-width: 900px) {
+  #main-menu li a { padding: 0 9px; font-size: 13px; }
+}

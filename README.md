@@ -1,5 +1,7 @@
 # Rubylode Obsidian for Redmine
 
+<p><img src="docs/thumbnail.png" alt="Rubylode Obsidian theme" width="160"></p>
+
 A theme for Redmine 7 and up: a white page with hairlines, black and grey for everything else, small corners and state circles and priority squares in the issue list.
 
 It is plain CSS plus one small script (`javascripts/theme.js`, about 170 lines), with no plugin, no build step and no change to
